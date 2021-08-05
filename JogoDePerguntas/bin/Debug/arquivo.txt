@@ -1,5 +1,5 @@
 
-Quantas copas do mundo a Seleção Brasileira conquistou?|7.|4.|5.|6.|C|A
+Quantas copas do mundo a Seleção Brasileira conquistou?|5.|4.|3.|6.|A|A
 Que país que tem realizado testes nucleares e, em 2017, ameaçou principalmente os Estados Unidos da América?|Síria.|Israel.|Coreia do Norte.|China.|C|A
 O que é Brexit?|Saída do Reino Unido da Zona Euro.|Saída do Reino Unido da União Europeia.|Fim da monarquia no Reino Unido.|Mudança do sistema de governo no Reino Unido.|B|A
 Qual a função da ONU?|Unir as nações com o objetivo de manter a paz e a segurança mundial.|Financiar países em desenvolvimento.|Gerenciar acordos de comércio entre os países.|Zelar pela cultura em todas as nações.|A|A
@@ -51,3 +51,4 @@ Em que país nasceu o Conde Drácula?|Irlanda.|Polônia.|Transilvânia.|Rússia.|C|A
 Que país foi dividido em 1949?|Áustria.|Dinamarca.|Polônia|Alemanha.|D|A
 Quem é o arquirrival do Batman?|Thanos.|Coringa.|Bruce Wayne.|Super-Man.|B|A
 Quantos mundiais o Palmeiras tem?|1|2|3|0|D|A
+||||||A

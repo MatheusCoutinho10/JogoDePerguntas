@@ -46,9 +46,9 @@ namespace JogoDePerguntas
 			// menuStrip1
 			// 
 			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-									this.quizToolStripMenuItem,
-									this.cadastroToolStripMenuItem,
-									this.ajudaToolStripMenuItem});
+			this.quizToolStripMenuItem,
+			this.cadastroToolStripMenuItem,
+			this.ajudaToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
 			this.menuStrip1.Size = new System.Drawing.Size(647, 24);
@@ -72,8 +72,8 @@ namespace JogoDePerguntas
 			// ajudaToolStripMenuItem
 			// 
 			this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
-			this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-			this.ajudaToolStripMenuItem.Text = "Ajuda";
+			this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
+			this.ajudaToolStripMenuItem.Text = "Sair";
 			// 
 			// MainForm
 			// 
@@ -88,6 +88,7 @@ namespace JogoDePerguntas
 			this.menuStrip1.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
+
 		}
 		private System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem;
