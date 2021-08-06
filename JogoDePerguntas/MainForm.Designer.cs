@@ -74,6 +74,7 @@ namespace JogoDePerguntas
 			this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
 			this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
 			this.ajudaToolStripMenuItem.Text = "Sair";
+			this.ajudaToolStripMenuItem.Click += new System.EventHandler(this.AjudaToolStripMenuItemClick);
 			// 
 			// MainForm
 			// 
@@ -83,7 +84,9 @@ namespace JogoDePerguntas
 			this.Controls.Add(this.menuStrip1);
 			this.MainMenuStrip = this.menuStrip1;
 			this.Name = "MainForm";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Jogo de Perguntas";
+			this.Load += new System.EventHandler(this.MainFormLoad);
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
 			this.ResumeLayout(false);

@@ -25,5 +25,14 @@ namespace JogoDePerguntas
 			FormPerguntas frm3 = new FormPerguntas();
 			frm3.Show();
 		}
+		void MainFormLoad(object sender, EventArgs e)
+		{
+			
+		}
+		void AjudaToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			//Botão sair
+			Application.Exit(); //Sair da aplicação
+		}
 	}
 }

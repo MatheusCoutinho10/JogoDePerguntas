@@ -317,12 +317,14 @@ namespace JogoDePerguntas
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.richTextBox1);
 			this.Name = "FormPerguntas";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Cadastro de Perguntas e Respostas";
 			this.Load += new System.EventHandler(this.FormPerguntasLoad);
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
+
 		}
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Label label7;

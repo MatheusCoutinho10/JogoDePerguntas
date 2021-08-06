@@ -184,11 +184,13 @@ namespace JogoDePerguntas
 			this.Controls.Add(this.btnProxQues);
 			this.Controls.Add(this.label1);
 			this.Name = "FormQuiz";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Quiz";
 			this.Load += new System.EventHandler(this.FormQuizLoad);
 			this.Click += new System.EventHandler(this.Button1Click);
 			this.panel1.ResumeLayout(false);
 			this.ResumeLayout(false);
+
 		}
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.RichTextBox richTextBox1;
