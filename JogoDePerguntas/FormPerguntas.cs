@@ -23,6 +23,7 @@ namespace JogoDePerguntas
 				richTextBox1.SaveFile("arquivo.txt",RichTextBoxStreamType.PlainText); //Salvando o arquivo
 			}
 			Novo(); //Utilizando o método "Novo"
+			btnAlterar.Enabled = false; //Deixando o botão "Gravar" clicável
 		}
 		
 		
@@ -30,6 +31,7 @@ namespace JogoDePerguntas
 		{
 			//Botão "Novo"
 			Novo(); //Utilizando o método "Novo"
+			btnAlterar.Enabled = false; //Deixando o botão "Gravar" clicável
 		}
 		
 		
@@ -67,13 +69,13 @@ namespace JogoDePerguntas
 				textBox5.Text = dados[3];
 				textBox6.Text = dados[4];
 				textBox7.Text = dados[5];
+				btnAlterar.Enabled = true; //Deixando o botão "Gravar" clicável
 			}
 			else //Se não
 			{
 				Novo(); //Método "Novo"
 				MessageBox.Show("Questionário não encontrado!","Aviso"); //Mensagem de erro
 			}
-			textBox1.Clear(); //Limpando o textBox
 			btnGravar.Enabled = false; //Deixando o botão "Gravar" não clicável
 		}
 		
@@ -105,6 +107,7 @@ namespace JogoDePerguntas
 			{
 				MessageBox.Show("Não foi possível realizar a operação","Aviso");//Messagem caso de erro
 			}
+			btnAlterar.Enabled = false; //Deixando o botão "Gravar" não clicável
 		}
 		
 		void BtnSairClick(object sender, EventArgs e)

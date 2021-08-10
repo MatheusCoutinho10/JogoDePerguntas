@@ -50,4 +50,3 @@ Qual a unidade que mede a intensidade do som?|Frequência.|Decibel.|Ruído.|Hertz.
 Em que país nasceu o Conde Drácula?|Irlanda.|Polônia.|Transilvânia.|Rússia.|C|A
 Que país foi dividido em 1949?|Áustria.|Dinamarca.|Polônia|Alemanha.|D|A
 Quem é o arquirrival do Batman?|Thanos.|Coringa.|Bruce Wayne.|Super-Man.|B|A
-Quantos mundiais o Palmeiras tem?|1|2|3|0|D|A
