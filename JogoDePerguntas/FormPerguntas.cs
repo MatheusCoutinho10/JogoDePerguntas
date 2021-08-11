@@ -24,6 +24,7 @@ namespace JogoDePerguntas
 			}
 			Novo(); //Utilizando o método "Novo"
 			btnAlterar.Enabled = false; //Deixando o botão "Gravar" clicável
+			textBox1.MaxLength = 3;
 		}
 		
 		
@@ -122,6 +123,16 @@ namespace JogoDePerguntas
 		{
 			//Botão sair
 			Application.Exit(); //Sair da aplicação
+		}
+		
+		void TextBox1KeyPress(object sender, KeyPressEventArgs e)
+		{
+            //Se a tecla digitada não for número e nem backspace
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 08)
+            {
+                //Atribui True no Handled para cancelar o evento
+                e.Handled = true;
+            }
 		}
 	}
 }

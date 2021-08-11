@@ -140,6 +140,7 @@ namespace JogoDePerguntas
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(40, 31);
 			this.textBox1.TabIndex = 4;
+			this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox1KeyPress);
 			// 
 			// btnAlterar
 			// 
