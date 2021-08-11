@@ -54,29 +54,37 @@ namespace JogoDePerguntas
 		void BtnConsultarClick(object sender, EventArgs e)
 		{
 			//Botão "Consultar"
-			int nLinha = int.Parse(textBox1.Text); //Recebendo o número da linha que o usuário digitar
-			
-			if(nLinha>0 && nLinha<richTextBox1.Lines.Length-1) //Se o número da linha for maior que 0 e menor que a quantidade do RichTextBox -a linha em branco
-			{
-				label8.Text = nLinha.ToString(); //Recebendo o número da linha
-				string linha = richTextBox1.Lines[nLinha]; //Recebendo os dados da linha
-				string[] dados = linha.Split('|'); //Cortando a linha nos "|"
+			if(textBox1.Text != "" && textBox1.Text != "0" && textBox1.Text != null){
+				int nLinha = int.Parse(textBox1.Text); //Recebendo o número da linha que o usuário digitar
+				if(nLinha>0 && nLinha<richTextBox1.Lines.Length-1) //Se o número da linha for maior que 0 e menor que a quantidade do RichTextBox -a linha em branco
+				{
+					label8.Text = nLinha.ToString(); //Recebendo o número da linha
+					string linha = richTextBox1.Lines[nLinha]; //Recebendo os dados da linha
+					string[] dados = linha.Split('|'); //Cortando a linha nos "|"
 				
-				//Recebendo os dados nos textBox
-				textBox2.Text = dados[0];
-				textBox3.Text = dados[1];
-				textBox4.Text = dados[2];
-				textBox5.Text = dados[3];
-				textBox6.Text = dados[4];
-				textBox7.Text = dados[5];
-				btnAlterar.Enabled = true; //Deixando o botão "Gravar" clicável
-			}
-			else //Se não
-			{
+					//Recebendo os dados nos textBox
+					textBox2.Text = dados[0];
+					textBox3.Text = dados[1];
+					textBox4.Text = dados[2];
+					textBox5.Text = dados[3];
+					textBox6.Text = dados[4];
+					textBox7.Text = dados[5];
+					btnAlterar.Enabled = true; //Deixando o botão "Gravar" clicável
+				}
+				else //Se não
+				{
+					Novo(); //Método "Novo"
+					MessageBox.Show("Questionário não encontrado!","Aviso"); //Mensagem de erro
+				}
+				btnGravar.Enabled = false; //Deixando o botão "Gravar" não clicável
+				textBox1.Clear();
+			}else{
 				Novo(); //Método "Novo"
-				MessageBox.Show("Questionário não encontrado!","Aviso"); //Mensagem de erro
+				MessageBox.Show("O campo da consulta não pode estar vazio!","Aviso"); //Mensagem de erro
+				btnGravar.Enabled = false; //Deixando o botão "Gravar" não clicável
+				btnAlterar.Enabled = false; //Deixando o botão "Alterar" não clicável
+				textBox1.Clear();
 			}
-			btnGravar.Enabled = false; //Deixando o botão "Gravar" não clicável
 		}
 		
 		
