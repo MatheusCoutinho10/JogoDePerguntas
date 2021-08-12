@@ -25,6 +25,7 @@ namespace JogoDePerguntas
 			Novo(); //Utilizando o método "Novo"
 			btnAlterar.Enabled = false; //Deixando o botão "Gravar" clicável
 			textBox1.MaxLength = 3;
+			textBox7.MaxLength = 1;
 		}
 		
 		
@@ -91,12 +92,28 @@ namespace JogoDePerguntas
 		
 		void BtnGravarClick(object sender, EventArgs e)
 		{
-			//Botão "Gravar"
-			string linha = textBox2.Text+"|"+textBox3.Text+"|"+textBox4.Text+"|"+textBox5.Text+"|"+textBox6.Text+"|"+textBox7.Text+"|A"; //Armazenando os dados dos textBox na String
-			richTextBox1.Text += linha + "\n"; //Adicionando a linha ao RichTextBox
-			richTextBox1.SaveFile("arquivo.txt",RichTextBoxStreamType.PlainText); //Salvando o arquivo
-			MessageBox.Show("Questionário gravado com sucesso","Aviso"); //Mensagem de sucesso
-			Novo(); //Método "Novo"
+			if(textBox2.Text == "" || textBox2.Text == "0" || textBox2.Text == null){
+				MessageBox.Show("O campo da pergunta não pode estar vazio!","Aviso"); //Mensagem de erro
+			}else if(textBox3.Text == "" || textBox3.Text == "0" || textBox3.Text == null){
+				MessageBox.Show("O campo da alternativa A não pode estar vazio!","Aviso"); //Mensagem de erro
+			}else if(textBox4.Text == "" || textBox4.Text == "0" || textBox4.Text == null){
+				MessageBox.Show("O campo da alternativa B não pode estar vazio!","Aviso"); //Mensagem de erro
+			}else if(textBox5.Text == "" || textBox5.Text == "0" || textBox5.Text == null){
+				MessageBox.Show("O campo da alternativa C não pode estar vazio!","Aviso"); //Mensagem de erro
+			}else if(textBox6.Text == "" || textBox6.Text == "0" || textBox6.Text == null){
+				MessageBox.Show("O campo da alternativa D não pode estar vazio!","Aviso"); //Mensagem de erro
+			}else if(textBox7.Text == "" || textBox7.Text == "0" || textBox7.Text == null){
+				MessageBox.Show("O campo da resposta não pode estar vazio!","Aviso"); //Mensagem de erro
+			}else if(textBox7.Text == "A" || textBox7.Text == "a" || textBox7.Text == "B" || textBox7.Text == "b" || textBox7.Text == "C" || textBox7.Text == "c" || textBox7.Text == "D" || textBox7.Text == "d"){
+				//Botão "Gravar"
+				string linha = textBox2.Text+"|"+textBox3.Text+"|"+textBox4.Text+"|"+textBox5.Text+"|"+textBox6.Text+"|"+textBox7.Text+"|A"; //Armazenando os dados dos textBox na String
+				richTextBox1.Text += linha + "\n"; //Adicionando a linha ao RichTextBox
+				richTextBox1.SaveFile("arquivo.txt",RichTextBoxStreamType.PlainText); //Salvando o arquivo
+				MessageBox.Show("Questionário gravado com sucesso","Aviso"); //Mensagem de sucesso
+				Novo(); //Método "Novo"
+			}else{
+				MessageBox.Show("Alternativa de resposta inexistente!","Aviso"); //Mensagem de erro
+			}
 		}
 		
 		void BtnAlterarClick(object sender, EventArgs e)
