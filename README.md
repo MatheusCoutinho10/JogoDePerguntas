@@ -65,7 +65,7 @@ Agora falando sobre a aplicação, ela inicia com a tela em branco e com um menu
 git clone https://github.com/MatheusCoutinho10/JogoDePerguntas
 
 # entrar na pasta do executável
-cd JogoDePerguntas\JogoDePerguntas\obj\Debug
+cd JogoDePerguntas\JogoDePerguntas\bin\Debug
 
 # executar o projeto
 JogoDePerguntas spring-boot:run
