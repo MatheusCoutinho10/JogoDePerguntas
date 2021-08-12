@@ -50,6 +50,7 @@ namespace JogoDePerguntas
 			textBox7.Clear();
 			label8.Text = (richTextBox1.Lines.Length-2).ToString(); //Mostrando a quantidade de registros
 			btnGravar.Enabled = true; //Deixando o botão "Gravar" clicável
+			btnAlterar.Enabled = false; //Deixando o botão "Alterar" não clicável
 		}
 		
 		
@@ -79,7 +80,6 @@ namespace JogoDePerguntas
 					MessageBox.Show("Questionário não encontrado!","Aviso"); //Mensagem de erro
 				}
 				btnGravar.Enabled = false; //Deixando o botão "Gravar" não clicável
-				textBox1.Clear();
 			}else{
 				Novo(); //Método "Novo"
 				MessageBox.Show("O campo da consulta não pode estar vazio!","Aviso"); //Mensagem de erro
@@ -121,19 +121,34 @@ namespace JogoDePerguntas
 			//BotãoAlterar
 			try //Tentar acessar os dados
 			{
-				int nLinha = int.Parse(label8.Text); //Recebendo o número da linha que o usuário escolheu
-				string linhaAntiga = richTextBox1.Lines[nLinha]; //Armazenando os dados a linha na String
-				string linhaNova = textBox2.Text+"|"+textBox3.Text+"|"+textBox4.Text+"|"+textBox5.Text+"|"+textBox6.Text+"|"+textBox7.Text+"|A"; //Armazenando os dados do TextBox na String
-				richTextBox1.Text = richTextBox1.Text.Replace(linhaAntiga,linhaNova); //Trocando os dados antigos pelos novos
-				richTextBox1.SaveFile("arquivo.txt",RichTextBoxStreamType.PlainText); //Salvando o arquivo
-				MessageBox.Show("Questionário alterado com sucesso!","Aviso"); //Mebsagem de sucesso
-				btnGravar.Enabled = false; //Deixando o botão "Gravar" não clicável
+				if(textBox2.Text == "" || textBox2.Text == "0" || textBox2.Text == null){
+					MessageBox.Show("O campo da pergunta não pode estar vazio!","Aviso"); //Mensagem de erro
+				}else if(textBox3.Text == "" || textBox3.Text == "0" || textBox3.Text == null){
+					MessageBox.Show("O campo da alternativa A não pode estar vazio!","Aviso"); //Mensagem de erro
+				}else if(textBox4.Text == "" || textBox4.Text == "0" || textBox4.Text == null){
+					MessageBox.Show("O campo da alternativa B não pode estar vazio!","Aviso"); //Mensagem de erro
+				}else if(textBox5.Text == "" || textBox5.Text == "0" || textBox5.Text == null){
+					MessageBox.Show("O campo da alternativa C não pode estar vazio!","Aviso"); //Mensagem de erro
+				}else if(textBox6.Text == "" || textBox6.Text == "0" || textBox6.Text == null){
+					MessageBox.Show("O campo da alternativa D não pode estar vazio!","Aviso"); //Mensagem de erro
+				}else if(textBox7.Text == "" || textBox7.Text == "0" || textBox7.Text == null){
+					MessageBox.Show("O campo da resposta não pode estar vazio!","Aviso"); //Mensagem de erro
+				}else if(textBox7.Text == "A" || textBox7.Text == "a" || textBox7.Text == "B" || textBox7.Text == "b" || textBox7.Text == "C" || textBox7.Text == "c" || textBox7.Text == "D" || textBox7.Text == "d"){
+					int nLinha = int.Parse(label8.Text); //Recebendo o número da linha que o usuário escolheu
+					string linhaAntiga = richTextBox1.Lines[nLinha]; //Armazenando os dados a linha na String
+					string linhaNova = textBox2.Text+"|"+textBox3.Text+"|"+textBox4.Text+"|"+textBox5.Text+"|"+textBox6.Text+"|"+textBox7.Text+"|A"; //Armazenando os dados do TextBox na String
+					richTextBox1.Text = richTextBox1.Text.Replace(linhaAntiga,linhaNova); //Trocando os dados antigos pelos novos
+					richTextBox1.SaveFile("arquivo.txt",RichTextBoxStreamType.PlainText); //Salvando o arquivo
+					MessageBox.Show("Questionário alterado com sucesso!","Aviso"); //Mebsagem de sucesso
+					Novo();
+				}else{
+					MessageBox.Show("Alternativa de resposta inexistente!","Aviso"); //Mensagem de erro
+				}
 			}
 			catch(Exception exc) //Caso de erro
 			{
 				MessageBox.Show("Não foi possível realizar a operação","Aviso");//Messagem caso de erro
 			}
-			btnAlterar.Enabled = false; //Deixando o botão "Gravar" não clicável
 		}
 		
 		void BtnSairClick(object sender, EventArgs e)
