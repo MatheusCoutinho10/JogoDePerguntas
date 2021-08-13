@@ -54,6 +54,7 @@ namespace JogoDePerguntas
 			string linhaCompleta = richTextBox1.Lines[linhaAtual]; //Pegando a linha novamente
 			string linhaNova = label1.Text+"|"+label2.Text+"|"+label3.Text+"|"+label4.Text+"|"+label5.Text+"|"+resposta+"|D"; //Trocando o último dado para "D"
 			richTextBox1.Text = richTextBox1.Text.Replace(linhaCompleta,linhaNova); //Trocando os dados antigos pelos novos
+			btnProxQues.Enabled = false; //Desativando o botão "Próxima Questão"
 		}
 		
 		void Button1Click(object sender, EventArgs e)
@@ -79,6 +80,7 @@ namespace JogoDePerguntas
 				contErros++; //Acrescenta mais 1 a variável global "contErros"
 			}
 			
+			btnProxQues.Enabled = true; //Ativando o botão "Próxima Questão"
 			int respostas = contErros + contAcertos; //variável respostas = a soma das variáveis contErros + contAcertos
 		
 			if(contErros + contAcertos == 10) //Se contErros + contAcertos == 10
@@ -90,6 +92,7 @@ namespace JogoDePerguntas
 		void BtnProxQuesClick(object sender, EventArgs e)
 		{
 			//Botão próxima pergunta
+			btnProxQues.Enabled = false; //Desativando o botão "Próxima Questão"
 			btnProxQues.Text = "Questão " + questao + " >>"; //Texto do botão
 			string status = "D"; //Atribuindo um valor D para string usada na comparação
             while (status == "D")

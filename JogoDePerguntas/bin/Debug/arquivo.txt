@@ -8,7 +8,7 @@ Sporting, Porto e Benfica são times do futebol europeu de que país?|Alemanha.|Po
 Qual dos seguintes não é um X-men?|Tocha Humana.|Homem de Gelo.|Noturno.|Colossus.|A|A
 Quem foi o jogador que foi expulso na final da copa do mundo de 2006 por ter dado uma cabeçada no adversário?|Franck Ribéry.|Eric Abidal.|Thierry Henry.|Zinedine Zidane.|D|A
 Quem foi o último jogador brasileiro a conquistar Bola de Ouro?|Kaká.|Ronaldinho Gaúcho.|Ronaldo.|Rivaldo.|A|A
-Qual foi o único jogador brasileiro que ganhou o prêmio de gol mais bonito da FIFA?|Ronaldo Fenômeno.|Romário.|Rivaldo.|Neymar Jr.|D|A
+Qual foi o único jogador brasileiro que ganhou o prêmio de gol mais bonito da FIFA?|Ronaldo Fenômeno.|Neymar Jr.|Rivaldo.|Romário|B|A
 Quem é conhecido como o rei do futebol?|Maradona.|Cristiano Ronaldo.|Messi.|Pelé.|D|A
 Onde foi disputada a primeira copa do mundo?|Brasil.|Argentina.|Uruguai.|França.|C|A
 Qual time conquistou mais vezes a Champions?|Barcelona.|Real Madrid.|Milan.|Liverpool.|B|A
@@ -53,3 +53,4 @@ Quem é o arquirrival do Batman?|Thanos.|Coringa.|Bruce Wayne.|Super-Man.|B|A
 Quem liderou o Nazismo?|Nelson Mandela.|Emílio Garrastazu Médici.|Czar Nicolau II.|Adolf Hitler.|A|A
 Qual é a data de nascimento do Adolf Hitler?|22 de abril de 1896.|20 de abril de 1889.|15 de março de 1882.|13 de maio de 1888.|B|A
 O que significa "Führer"?|Líder.|Capitão.|Ordem.|General.|A|A
+O que significa "Mein Kampf"?|Meia Luta.|Meu Campo.|Minha Guerra.|Minha Luta.|D|A
